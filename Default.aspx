@@ -107,10 +107,14 @@
                     <div class="col-lg-8">
                         <div class="header-hero-content text-center">
                             <h2 class="header-title wow fadeInUp">Meet Perry</h2>
-                            <h4 class="header-sub-title wow fadeInUp">AI and natural language processing inteligent bot</h4>
-                              <p class="text wow fadeInUp">
+                           <%-- <h4 class="header-sub-title wow fadeInUp">AI and natural language processing inteligent bot</h4>--%>
+                            <p class="text wow fadeInUp">
+                              Robust, feature-rich on-device chatbot development framework powered by Machine Learning for advanced natural 
+                                  language processing (NLP) and intent recognition, cognitive services, Oryzer Studio the BotFramework &amp Oscova Bot.
+                            </p>
+                             <p class="text wow fadeInUp">
                                Perry is part of the BlueMoon Software Family - Let us create your bot with the ability to speak, listen, understand, and 
-                               learn from your users. Powered by Azure Cognitive Services, the BotFramework &amp Oscvoa Bot.
+                               learn from your users. 
                             </p>
                              <a class="main-btn" data-scroll-nav="0" href="#">Get Started</a>
                             </div> <!-- header hero content -->
