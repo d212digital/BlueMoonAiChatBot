@@ -28,9 +28,9 @@ namespace BlueMoonAiChatBot
             WidgetChannel.ServiceUrl = websiteUrl + "/BotService.aspx";
             WidgetChannel.ResourceUrl = websiteUrl + "/BotResources";
 
-            WidgetChannel.WidgetTitle = "BlueMoon ChatBot!";
+            WidgetChannel.WidgetTitle = "Hi my name is Perry";
             WidgetChannel.LaunchButtonText = "Ask Perry";
-            WidgetChannel.InputPlaceHolder = "Ask a question...";
+            WidgetChannel.InputPlaceHolder = "Ask me a question...";
         }
 
         protected void Page_Load(object sender, EventArgs e)

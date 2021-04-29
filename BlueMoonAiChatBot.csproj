@@ -1,4 +1,5 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -23,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.0</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -145,13 +147,231 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="background.jpg" />
+    <Content Include="BotResources\assets\css\animate.css" />
+    <Content Include="BotResources\assets\css\bootstrap.min.css" />
+    <Content Include="BotResources\assets\css\default.css" />
+    <Content Include="BotResources\assets\css\font-awesome.min.css" />
+    <Content Include="BotResources\assets\css\LineIcons.css" />
+    <Content Include="BotResources\assets\css\magnific-popup.css" />
+    <Content Include="BotResources\assets\css\slick.css" />
+    <Content Include="BotResources\assets\css\style.css" />
+    <Content Include="BotResources\assets\demo\chart-area-demo.js" />
+    <Content Include="BotResources\assets\demo\chart-area-demo2.js" />
+    <Content Include="BotResources\assets\demo\chart-bar-demo.js" />
+    <Content Include="BotResources\assets\demo\chart-pie-demo.js" />
+    <Content Include="BotResources\assets\demo\datatables-demo.js" />
+    <Content Include="BotResources\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="BotResources\assets\fonts\LineIcons.svg" />
+    <Content Include="BotResources\assets\images\about-shape-1.svg" />
+    <Content Include="BotResources\assets\images\about-shape-2.svg" />
+    <Content Include="BotResources\assets\images\about.jpg" />
+    <Content Include="BotResources\assets\images\about.png" />
+    <Content Include="BotResources\assets\images\about1.svg" />
+    <Content Include="BotResources\assets\images\about2.svg" />
+    <Content Include="BotResources\assets\images\about3.svg" />
+    <Content Include="BotResources\assets\images\asp-net-logo.png" />
+    <Content Include="BotResources\assets\images\author-1.png" />
+    <Content Include="BotResources\assets\images\author-2.png" />
+    <Content Include="BotResources\assets\images\author-3.png" />
+    <Content Include="BotResources\assets\images\azure-logo.jpg" />
+    <Content Include="BotResources\assets\images\banner-bg.svg" />
+    <Content Include="BotResources\assets\images\blog-1.jpg" />
+    <Content Include="BotResources\assets\images\blog-2.jpg" />
+    <Content Include="BotResources\assets\images\blog-3.jpg" />
+    <Content Include="BotResources\assets\images\bootstrap-stack.png" />
+    <Content Include="BotResources\assets\images\brand-1.png" />
+    <Content Include="BotResources\assets\images\brand-2.png" />
+    <Content Include="BotResources\assets\images\brand-3.png" />
+    <Content Include="BotResources\assets\images\brand-4.png" />
+    <Content Include="BotResources\assets\images\brand-5.png" />
+    <Content Include="BotResources\assets\images\brwser-logo.png" />
+    <Content Include="BotResources\assets\images\contact-hero.png" />
+    <Content Include="BotResources\assets\images\cross-browser-compatibility-testing.jpg" />
+    <Content Include="BotResources\assets\images\dots.svg" />
+    <Content Include="BotResources\assets\images\Edge-logo.png" />
+    <Content Include="BotResources\assets\images\ef-core-logo.png" />
+    <Content Include="BotResources\assets\images\ef-core.png" />
+    <Content Include="BotResources\assets\images\EF-framework.jpg" />
+    <Content Include="BotResources\assets\images\favicon.png" />
+    <Content Include="BotResources\assets\images\footer-bg.svg" />
+    <Content Include="BotResources\assets\images\header-hero-1.png" />
+    <Content Include="BotResources\assets\images\header-hero.png" />
+    <Content Include="BotResources\assets\images\html-js.png" />
+    <Content Include="BotResources\assets\images\logo-2.png" />
+    <Content Include="BotResources\assets\images\logo-2.svg" />
+    <Content Include="BotResources\assets\images\logo.png" />
+    <Content Include="BotResources\assets\images\logo.svg" />
+    <Content Include="BotResources\assets\images\logo_small.png" />
+    <Content Include="BotResources\assets\images\mat_ui.png" />
+    <Content Include="BotResources\assets\images\ms-azure.png" />
+    <Content Include="BotResources\assets\images\my-sql-logo.png" />
+    <Content Include="BotResources\assets\images\mysql-logo.jpg" />
+    <Content Include="BotResources\assets\images\mysql-logo.jpg.png" />
+    <Content Include="BotResources\assets\images\netcore.png" />
+    <Content Include="BotResources\assets\images\privacy-hero.png" />
+    <Content Include="BotResources\assets\images\services-shape-1.svg" />
+    <Content Include="BotResources\assets\images\services-shape-2.svg" />
+    <Content Include="BotResources\assets\images\services-shape-3.svg" />
+    <Content Include="BotResources\assets\images\services-shape.svg" />
+    <Content Include="BotResources\assets\images\sql-server-logo.png" />
+    <Content Include="BotResources\assets\images\sql-server.png" />
+    <Content Include="BotResources\assets\images\success-hero.png" />
+    <Content Include="BotResources\assets\images\sucess-hero.png" />
+    <Content Include="BotResources\assets\images\team-1.png" />
+    <Content Include="BotResources\assets\images\team-2.png" />
+    <Content Include="BotResources\assets\images\team-3.png" />
+    <Content Include="BotResources\assets\images\textimonial-shape.svg" />
+    <Content Include="BotResources\assets\images\video.png" />
+    <Content Include="BotResources\assets\images\visual-studio.png" />
+    <Content Include="BotResources\assets\images\win-linux.png" />
+    <Content Include="BotResources\assets\images\Windows-vs.-Linux.jpg" />
+    <Content Include="BotResources\assets\img\error-404-monochrome.svg" />
+    <Content Include="BotResources\assets\js\ajax-contact.js" />
+    <Content Include="BotResources\assets\js\bootstrap.min.js" />
+    <Content Include="BotResources\assets\js\jquery.counterup.min.js" />
+    <Content Include="BotResources\assets\js\jquery.easing.min.js" />
+    <Content Include="BotResources\assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="BotResources\assets\js\main.js" />
+    <Content Include="BotResources\assets\js\particles.min.js" />
+    <Content Include="BotResources\assets\js\plugins.js" />
+    <Content Include="BotResources\assets\js\popper.min.js" />
+    <Content Include="BotResources\assets\js\scrolling-nav.js" />
+    <Content Include="BotResources\assets\js\slick.min.js" />
+    <Content Include="BotResources\assets\js\vendor\jquery-1.12.4.min.js" />
+    <Content Include="BotResources\assets\js\vendor\modernizr-3.7.1.min.js" />
+    <Content Include="BotResources\assets\js\waypoints.min.js" />
+    <Content Include="BotResources\assets\js\wow.min.js" />
+    <Content Include="BotResources\background.png" />
     <Content Include="BotResources\bot-avatar.png" />
     <Content Include="BotResources\close-button.png" />
+    <Content Include="BotResources\logo.png" />
     <Content Include="BotResources\send-button.png" />
     <Content Include="BotResources\user-avatar.png" />
     <Content Include="BotService.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Default.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\index.js.flow" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="BotResources\assets\.DS_Store" />
+    <Content Include="BotResources\assets\css\style.css.map" />
+    <Content Include="BotResources\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="BotResources\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="BotResources\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="BotResources\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="BotResources\assets\fonts\FontAwesome.otf" />
+    <Content Include="BotResources\assets\fonts\LineIcons.eot" />
+    <Content Include="BotResources\assets\fonts\LineIcons.ttf" />
+    <Content Include="BotResources\assets\fonts\LineIcons.woff" />
+    <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.0.0.js" />
+    <Content Include="Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\src\index.js" />
+    <Content Include="Scripts\src\methods\defaults.js" />
+    <Content Include="Scripts\src\methods\destroy.js" />
+    <Content Include="Scripts\src\methods\disableEventListeners.js" />
+    <Content Include="Scripts\src\methods\enableEventListeners.js" />
+    <Content Include="Scripts\src\methods\placements.js" />
+    <Content Include="Scripts\src\methods\update.js" />
+    <Content Include="Scripts\src\modifiers\applyStyle.js" />
+    <Content Include="Scripts\src\modifiers\arrow.js" />
+    <Content Include="Scripts\src\modifiers\computeStyle.js" />
+    <Content Include="Scripts\src\modifiers\flip.js" />
+    <Content Include="Scripts\src\modifiers\hide.js" />
+    <Content Include="Scripts\src\modifiers\index.js" />
+    <Content Include="Scripts\src\modifiers\inner.js" />
+    <Content Include="Scripts\src\modifiers\keepTogether.js" />
+    <Content Include="Scripts\src\modifiers\offset.js" />
+    <Content Include="Scripts\src\modifiers\preventOverflow.js" />
+    <Content Include="Scripts\src\modifiers\shift.js" />
+    <Content Include="Scripts\src\utils\clockwise.js" />
+    <Content Include="Scripts\src\utils\computeAutoPlacement.js" />
+    <Content Include="Scripts\src\utils\debounce.js" />
+    <Content Include="Scripts\src\utils\find.js" />
+    <Content Include="Scripts\src\utils\findCommonOffsetParent.js" />
+    <Content Include="Scripts\src\utils\findIndex.js" />
+    <Content Include="Scripts\src\utils\getBordersSize.js" />
+    <Content Include="Scripts\src\utils\getBoundaries.js" />
+    <Content Include="Scripts\src\utils\getBoundingClientRect.js" />
+    <Content Include="Scripts\src\utils\getClientRect.js" />
+    <Content Include="Scripts\src\utils\getFixedPositionOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetRect.js" />
+    <Content Include="Scripts\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getOppositePlacement.js" />
+    <Content Include="Scripts\src\utils\getOppositeVariation.js" />
+    <Content Include="Scripts\src\utils\getOuterSizes.js" />
+    <Content Include="Scripts\src\utils\getParentNode.js" />
+    <Content Include="Scripts\src\utils\getPopperOffsets.js" />
+    <Content Include="Scripts\src\utils\getReferenceNode.js" />
+    <Content Include="Scripts\src\utils\getReferenceOffsets.js" />
+    <Content Include="Scripts\src\utils\getRoot.js" />
+    <Content Include="Scripts\src\utils\getRoundedOffsets.js" />
+    <Content Include="Scripts\src\utils\getScroll.js" />
+    <Content Include="Scripts\src\utils\getScrollParent.js" />
+    <Content Include="Scripts\src\utils\getStyleComputedProperty.js" />
+    <Content Include="Scripts\src\utils\getSupportedPropertyName.js" />
+    <Content Include="Scripts\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getWindow.js" />
+    <Content Include="Scripts\src\utils\getWindowSizes.js" />
+    <Content Include="Scripts\src\utils\includeScroll.js" />
+    <Content Include="Scripts\src\utils\index.js" />
+    <Content Include="Scripts\src\utils\isBrowser.js" />
+    <Content Include="Scripts\src\utils\isFixed.js" />
+    <Content Include="Scripts\src\utils\isFunction.js" />
+    <Content Include="Scripts\src\utils\isIE.js" />
+    <Content Include="Scripts\src\utils\isModifierEnabled.js" />
+    <Content Include="Scripts\src\utils\isModifierRequired.js" />
+    <Content Include="Scripts\src\utils\isNumeric.js" />
+    <Content Include="Scripts\src\utils\isOffsetContainer.js" />
+    <Content Include="Scripts\src\utils\removeEventListeners.js" />
+    <Content Include="Scripts\src\utils\runModifiers.js" />
+    <Content Include="Scripts\src\utils\setAttributes.js" />
+    <Content Include="Scripts\src\utils\setStyles.js" />
+    <Content Include="Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +393,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper.js.flow" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -180,11 +412,18 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>
