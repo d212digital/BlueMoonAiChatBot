@@ -34,6 +34,10 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +47,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Discord.Net.Core, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -149,31 +157,6 @@
   <ItemGroup>
     <Content Include="bin\BlueMoonAiChatBot.dll" />
     <Content Include="bin\BlueMoonAiChatBot.pdb" />
-    <Content Include="bin\Discord.Net.Core.dll" />
-    <Content Include="bin\Discord.Net.Core.xml" />
-    <Content Include="bin\Discord.Net.Rest.dll" />
-    <Content Include="bin\Discord.Net.Rest.xml" />
-    <Content Include="bin\Discord.Net.WebSocket.dll" />
-    <Content Include="bin\Discord.Net.WebSocket.xml" />
-    <Content Include="bin\Jint.dll" />
-    <Content Include="bin\Microsoft.Bcl.AsyncInterfaces.dll" />
-    <Content Include="bin\Microsoft.Bcl.AsyncInterfaces.xml" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
-    <Content Include="bin\Microsoft.Owin.Cors.dll" />
-    <Content Include="bin\Microsoft.Owin.Cors.xml" />
-    <Content Include="bin\Microsoft.Owin.dll" />
-    <Content Include="bin\Microsoft.Owin.Host.HttpListener.dll" />
-    <Content Include="bin\Microsoft.Owin.Host.HttpListener.xml" />
-    <Content Include="bin\Microsoft.Owin.Hosting.dll" />
-    <Content Include="bin\Microsoft.Owin.Hosting.xml" />
-    <Content Include="bin\Microsoft.Owin.xml" />
-    <Content Include="bin\Newtonsoft.Json.dll" />
-    <Content Include="bin\Newtonsoft.Json.xml" />
-    <Content Include="bin\Owin.dll" />
-    <Content Include="bin\roslyn\csc.exe" />
-    <Content Include="bin\roslyn\csi.exe" />
-    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
     <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
     <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
     <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
@@ -181,14 +164,6 @@
     <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
     <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
     <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
-    <Content Include="bin\roslyn\Microsoft.Win32.Primitives.dll" />
-    <Content Include="bin\roslyn\System.AppContext.dll" />
-    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
-    <Content Include="bin\roslyn\System.Console.dll" />
-    <Content Include="bin\roslyn\System.Diagnostics.DiagnosticSource.dll" />
-    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
-    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
-    <Content Include="bin\roslyn\System.Globalization.Calendars.dll" />
     <Content Include="bin\roslyn\System.IO.Compression.dll" />
     <Content Include="bin\roslyn\System.IO.Compression.ZipFile.dll" />
     <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
@@ -210,27 +185,6 @@
     <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
-    <Content Include="bin\Syn.Bot.Channels.dll" />
-    <Content Include="bin\Syn.Bot.dll" />
-    <Content Include="bin\Syn.Bot.xml" />
-    <Content Include="bin\Syn.Oryzer.dll" />
-    <Content Include="bin\Syn.Platform.dll" />
-    <Content Include="bin\Syn.Utilities.dll" />
-    <Content Include="bin\Syn.Workspace.dll" />
-    <Content Include="bin\System.Collections.Immutable.dll" />
-    <Content Include="bin\System.Collections.Immutable.xml" />
-    <Content Include="bin\System.Interactive.Async.dll" />
-    <Content Include="bin\System.Interactive.Async.xml" />
-    <Content Include="bin\System.IO.Compression.dll" />
-    <Content Include="bin\System.Linq.Async.dll" />
-    <Content Include="bin\System.Linq.Async.xml" />
-    <Content Include="bin\System.Runtime.CompilerServices.Unsafe.dll" />
-    <Content Include="bin\System.Runtime.CompilerServices.Unsafe.xml" />
-    <Content Include="bin\System.Threading.Tasks.Extensions.dll" />
-    <Content Include="bin\System.Threading.Tasks.Extensions.xml" />
-    <Content Include="bin\System.Web.Cors.dll" />
-    <Content Include="bin\Telegram.Bot.dll" />
-    <Content Include="bin\Telegram.Bot.xml" />
     <Content Include="BotResources\assets\css\animate.css" />
     <Content Include="BotResources\assets\css\bootstrap.min.css" />
     <Content Include="BotResources\assets\css\default.css" />
@@ -342,9 +296,6 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="obj\Debug\BlueMoonAiChatBot.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\BlueMoonAiChatBot.dll" />
-    <Content Include="obj\Debug\BlueMoonAiChatBot.pdb" />
     <Content Include="packages\bootstrap.4.6.0\bootstrap.png" />
     <Content Include="packages\bootstrap.4.6.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" />
     <Content Include="packages\bootstrap.4.6.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css" />
@@ -779,21 +730,11 @@
     <Content Include="BotResources\assets\fonts\LineIcons.ttf" />
     <Content Include="BotResources\assets\fonts\LineIcons.woff" />
     <Content Include="bin\BlueMoonAiChatBot.dll.config" />
-    <Content Include="bin\roslyn\csc.exe.config" />
-    <Content Include="bin\roslyn\csc.rsp" />
-    <Content Include="bin\roslyn\csi.exe.config" />
-    <Content Include="bin\roslyn\csi.rsp" />
     <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
     <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
     <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
-    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
-    <Content Include="obj\Debug\BlueMoonAiChatBot.csproj.CopyComplete" />
-    <Content Include="obj\Debug\BlueMoonAiChatBot.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\BlueMoonAiChatBot.csprojAssemblyReference.cache" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\Tsc.out" />
     <Content Include="packages\bootstrap.4.6.0\.signature.p7s" />
     <Content Include="packages\bootstrap.4.6.0\bootstrap.4.6.0.nupkg" />
     <Content Include="packages\bootstrap.4.6.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map" />
@@ -993,6 +934,7 @@
     <Content Include="packages\System.Threading.Tasks.Extensions.4.5.2\System.Threading.Tasks.Extensions.4.5.2.nupkg" />
     <Content Include="packages\Telegram.Bot.15.7.1\.signature.p7s" />
     <Content Include="packages\Telegram.Bot.15.7.1\Telegram.Bot.15.7.1.nupkg" />
+    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -1086,7 +1028,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1118,8 +1059,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="wwwroot\" />
+    <Folder Include="obj\Debug\" />
+    <Folder Include="obj\Release\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

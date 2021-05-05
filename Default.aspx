@@ -104,12 +104,12 @@
            <div>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="col-lg-10">
                         <div class="header-hero-content text-center">
                             <h2 class="header-title wow fadeInUp">Meet Perry</h2>
                            <%-- <h4 class="header-sub-title wow fadeInUp">AI and natural language processing inteligent bot</h4>--%>
                             <p class="text wow fadeInUp">
-                              Robust, feature-rich on-device chatbot development framework powered by Machine Learning for advanced natural 
+                              Our Enterprise Class AI Chatbot is a robust, feature-rich on-device chatbot framework powered by Machine Learning for advanced natural 
                                   language processing (NLP) and intent recognition, cognitive services, Oryzer Studio the BotFramework &amp Oscova Bot.
                             </p>
                              <p class="text wow fadeInUp">
